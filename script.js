@@ -1,0 +1,164 @@
+// Example 1 =>   Cheak Area 
+let base = prompt('Enter base of triangle');
+let height = prompt('Enter height of triangle');
+base = Number(base);
+height = Number(height);
+let area = 0.5 * base * height;
+console.log(" Area of triangle", area)
+if (area > 50) {
+    console.log("Area is greater than 50")
+} else if (area > 30) {
+    console.log("Area is greater than 30")
+}
+else {
+    console.log("Area is less than 30 ")
+}
+// Example 2  percentage 
+let obtmarks = prompt("Enter obtmarks")
+let totalmarks = prompt("enter totalmarks")
+obtmarks = Number(obtmarks)
+totalmarks = Number(totalmarks)
+let percentage = obtmarks / totalmarks * 100
+console.log('percemtage', percentage.toFixed(2))
+if (percentage >= 80) {
+    console.log("Grade A")
+} else if (percentage >= 70) {
+    console.log("Grade B")
+} else if (percentage >= 60) {
+    console.log("Grade C")
+} else if (percentage >= 50) {
+    console.log("Grade D")
+}
+else {
+    console.log("Fail")
+}
+
+
+// Example 3 Age For Aligblity
+let age = prompt("Enter Age ")
+if (age < 18) {
+    alert("You are not eligble")
+
+} else {
+    alert("You are  aligble")
+}
+
+// Exapmle 4 BMI 
+let weight2 = Number(prompt("Enter your weight in kg"));
+let height2 = Number(prompt("Enter your height in meters"));
+
+let bmi = weight2 / (height2 * height2);
+
+console.log("BMI:", bmi.toFixed(2));
+
+if (bmi < 18.5) {
+    console.log("Underweight");
+} else if (bmi >= 18.5 && bmi < 25) {
+    console.log("Normal weight");
+} else if (bmi >= 25 && bmi < 30) {
+    console.log("Overweight");
+} else {
+    console.log("Obese");
+}
+
+
+// Example 5 if else statement of friend age 
+let friendage = 13
+if (friendage >= 30) {
+    console.log('Not Friend')
+
+} else if (friendage >= 25) {
+    console.log("Friends")
+} else if (friendage >= 15) {
+    console.log("Too small to be friend")
+} else {
+    console.log("Rejected")
+}
+// Example 6 marks , percentage and grade 
+let English = Number(prompt('Enter English Marks'))
+let Physics = Number(prompt('Enter Physics Marks'))
+let Maths = Number(prompt('Enter Matha Marks'))
+let Urdu = Number(prompt('Enter Urdu Marks'))
+let Marks = English + Physics + Maths + Urdu
+let percentage1 = (Marks / 400) * 100
+console.log(Marks, 'Marks')
+console.log('Percentage', percentage1.toFixed(2));
+if (percentage1 >= 80) {
+    console.log('Grade A')
+} else if (percentage1 >= 70) {
+    console.log('Grade B')
+}
+else if (percentage1 >= 60) {
+    console.log('Grade C')
+} else if (percentage1 >= 50) {
+    console.log('Grade D')
+}
+else {
+    console.log("Fail")
+}
+
+// example 7 logical AND && 
+
+let age1 = 20;
+let hasID = true;
+
+if (age1 >= 18 && hasID) {
+    console.log("You can enter the Arfa Software Technology Park");
+} else {
+    console.log("You cannot enter the Arfa Software Technology Park");
+}
+
+// example  8 logical  OR ||
+let isWeekend = false;
+let isHoliday = true;
+
+if (isWeekend || isHoliday) {
+    console.log("You can sleep late today!");
+} else {
+    console.log("Time to wake up early");
+}
+// expmple 9 logical NOT ! 
+let isRaining = false;
+
+if (!isRaining) {
+    console.log("Let's go to web class");
+} else {
+    console.log("stay at hostel");
+}
+// example 10  if else and logical condition  LTV  HTV license
+
+let age2 = Number(prompt("Enter your age:"));
+let licenseType = prompt("Enter license type (HTV/LTV):").toUpperCase()
+if (licenseType === "LTV" && age2 >= 18) {
+    console.log("You are eligible for LTV license");
+}
+else if (licenseType === "HTV" && age2 >= 25) {
+    console.log("You are eligible for HTV license");
+}
+else if (!(licenseType === "LTV" || licenseType === "HTV")) {
+    console.log("Invalid license type entered");
+}
+else {
+    console.log("You are not eligible due to age");
+}
+// example 11 eligible for vote
+let age3 = Number(prompt("Enter your age:"));
+let nationality = prompt("Enter your nationality:").toLowerCase();
+
+if (age3 >= 18 && nationality === "pakistani") {
+    alert("You are eligible to vote");
+} else if (age3 < 18 && nationality === "pakistani") {
+    alert("You are Pakistani but not old enough to vote");
+} else {
+    alert("You are not eligible to vote (non-Pakistani)");
+}
+// example 12 Passport eligibility
+let age4 = Number(prompt("Enter your age for passport:"));
+let nationality1 = prompt("Enter your nationality:").toLowerCase();
+
+if (age4 >= 18 || nationality1 === "pakistani") {
+    alert("You can apply for a passport");
+} else {
+    alert("You cannot apply for a passport");
+}
+
