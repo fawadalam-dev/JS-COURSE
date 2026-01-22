@@ -57,18 +57,23 @@
         }
 
         // Exapmle 4 BMI 
-        let bmi = prompt("Enter Bmi")
-        if (bmi > 30) {
-            console.log('you are obese')
+        let weight2 = Number(prompt("Enter your weight in kg"));
+        let height2 = Number(prompt("Enter your height in meters"));
 
-        } else if (bmi > 25) {
-            console.log('you are normal')
+        let bmi = weight2 / (height2 * height2);
 
-        } else if (bmi > 20) {
-            console.log('you are underweight')
+        console.log("BMI:", bmi.toFixed(2));
+
+        if (bmi < 18.5) {
+            console.log("Underweight");
+        } else if (bmi >= 18.5 && bmi < 25) {
+            console.log("Normal weight");
+        } else if (bmi >= 25 && bmi < 30) {
+            console.log("Overweight");
         } else {
-            console.log('incorrect Bmi')
+            console.log("Obese");
         }
+
 
         // Example 5 if else statement of friend age 
         let friendage = 13
