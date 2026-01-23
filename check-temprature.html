@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Temprature</title>
+</head>
+
+<body>
+    <h1>JavaScript if-else program using Fahrenheit temperature
+        <script>
+            // enter temprature in - or +
+            let temp = Number(prompt('Enter temprature in farenheit'))
+            temp = Number(temp)
+            if (temp <= 0) {
+                console.log(temp, ' Very Cold Weather')
+                console.log(temp, 'District : Buner , Swat , Shangla ,Dir')
+            } else if (temp > 0 && temp <= 20) {
+                console.log(temp, 'Normal Weather')
+                console.log(temp, 'District : Mardan , Charsada ,Swabi')
+            }
+            else {
+                console.log(temp, 'Hot Wather ')
+                console.log(temp, 'District : Lahore , Multan , Karachi ');
+            }
+        </script>
+    </h1>
+</body>
+
+</html>

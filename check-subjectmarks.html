@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Marks of Subject </title>
+</head>
+
+<body>
+    <h1> JavaScript if-else program using for check multiple subject marks percentage and grade </h1>
+    <script>
+        let English = Number(prompt('Enter English Marks'))
+        let Physics = Number(prompt('Enter Physics Marks'))
+        let Maths = Number(prompt('Enter Matha Marks'))
+        let Urdu = Number(prompt('Enter Urdu Marks'))
+        let Marks = English + Physics + Maths + Urdu
+        let percentage1 = (Marks / 400) * 100
+        console.log(Marks, 'Marks')
+        console.log('Percentage', percentage1.toFixed(2));
+        if (percentage1 >= 80) {
+            console.log('Grade A')
+        } else if (percentage1 >= 70) {
+            console.log('Grade B')
+        }
+        else if (percentage1 >= 60) {
+            console.log('Grade C')
+        } else if (percentage1 >= 50) {
+            console.log('Grade D')
+        }
+        else {
+            console.log("Fail")
+        }
+
+    </script>
+</body>
+
+</html>

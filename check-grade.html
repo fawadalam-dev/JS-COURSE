@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage & Grade</title>
+</head>
+<body>
+    <h1> JavaScript if-else program using percentage and grade</h1>
+    <script>
+        // Example 2 Check result in  percentage and grade
+        let obtmarks = prompt("Enter obtmarks")
+        let totalmarks = prompt("enter totalmarks")
+        obtmarks = Number(obtmarks)
+        totalmarks = Number(totalmarks)
+        let percentage = obtmarks / totalmarks * 100
+        console.log('percemtage', percentage.toFixed(2))
+        if (percentage >= 80) {
+            console.log("Grade A")
+        } else if (percentage >= 70) {
+            console.log("Grade B")
+        } else if (percentage >= 60) {
+            console.log("Grade C")
+        } else if (percentage >= 50) {
+            console.log("Grade D")
+        }
+        else {
+            console.log("Fail")
+        }
+
+    </script>
+</body>
+
+</html>

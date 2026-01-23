@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Bmi</title>
+</head>
+
+<body>
+    <h1>JavaScript if-else and logical && program using Weight and Height for Bmi</h1>
+    <script>
+        let weight = Number(prompt('Enter Weight in Kg'))
+        let height = Number(prompt('Enter height in Meters '))
+        let bmi = weight / (height) ** 2
+        if (bmi < 20) {
+            alert('Under weight')
+        } else if (bmi >= 20 && bmi < 35) {
+            alert('Normal weight')
+        } else if (bmi > 35 && bmi <= 40) {
+            alert('Over weight')
+        }
+        else {
+            alert('Obese');
+
+        }
+    </script>
+</body>
+
+</html>

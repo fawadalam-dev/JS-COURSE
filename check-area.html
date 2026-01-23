@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Area</title>
+</head>
+
+<body>
+    <h1>JavaScript if-else program using Check Area</h1>
+    <script>
+        let base = prompt('Enter base of triangle');
+        let height = prompt('Enter height of triangle');
+        base = Number(base);
+        height = Number(height);
+        let area = 0.5 * base * height;
+        console.log(" Area of triangle", area)
+        if (area > 50) {
+            console.log("Area is greater than 50")
+        } else if (area > 30) {
+            console.log("Area is greater than 30")
+        }
+        else {
+            console.log("Area is less than 30 ")
+        }
+    </script>
+</body>
+
+</html>
