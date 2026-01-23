@@ -12,13 +12,16 @@
     <a href="./index.html">Home</a>
 
     <script>
-        let isRaining = false;
 
+        let isRaining = prompt('Enter true or false ') === "true" && "false"
         if (!isRaining) {
             alert("Let's go to web class");
+            console.log("Let's go to web class")
         } else {
             alert("stay at hostel");
+            console.log("Stay at hostel")
         }
+        console.log(isRaining)
     </script>
 </body>
 
