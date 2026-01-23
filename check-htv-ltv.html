@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTV HTV license</title>
+</head>
+
+<body>
+    <h1> JavaScript if else and logical condition LTV HTV license</h1>
+    <a href="./index.html">Home</a>
+
+
+
+
+    <script>
+
+        let age2 = Number(prompt("Enter your age:"));
+        let licenseType = prompt("Enter license type (HTV/LTV):").toUpperCase()
+        if (licenseType === "LTV" && age2 >= 18) {
+            console.log("You are eligible for LTV license");
+        }
+        else if (licenseType === "HTV" && age2 >= 25) {
+            console.log("You are eligible for HTV license");
+        }
+        else if (!(licenseType === "LTV" || licenseType === "HTV")) {
+            console.log("Invalid license type entered");
+        }
+        else {
+            console.log("You are not eligible due to age");
+        }
+    </script>
+</body>
+
+</html>

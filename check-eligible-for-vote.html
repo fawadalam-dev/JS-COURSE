@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligible For Vote</title>
+</head>
+
+<body>
+    <h1>JavaScript Program Eligible For Vote</h1>
+    <a href="./index.html">Home</a>
+
+    <script>
+        let age = Number(prompt("Enter your age:"));
+        let nationality = prompt("Enter your nationality:").toLowerCase();
+
+        if (age >= 18 && nationality === "pakistani") {
+            alert("You are eligible to vote");
+        } else if (age < 18 && nationality === "pakistani") {
+            alert("You are Pakistani but not old enough to vote");
+        } else {
+            alert("You are not eligible to vote (non-Pakistani)");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligiblility For Passport</title>
+</head>
+
+<body>
+    <h1>JavaScript Program Eligiblility For Passport</h1>
+    <a href="./index.html">Home</a>
+
+    <script>
+        let age4 = Number(prompt("Enter your age for passport:"));
+        let nationality1 = prompt("Enter your nationality:").toLowerCase();
+
+        if (age4 >= 18 || nationality1 === "pakistani") {
+            alert("You can apply for a passport");
+        } else {
+            alert("You cannot apply for a passport");
+        }
+    </script>
+</body>
+
+</html>
