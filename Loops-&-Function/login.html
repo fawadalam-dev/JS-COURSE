@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+</head>
+
+<h1>Login System (while + condition) </h1>
+<button onclick="loginSystem()">Login</button>
+<hr>
+<a href="./checkage.html">Check Age</a><br>
+<a href="./even-odd.html">Even Odd</a><br>
+<a href="./print-table.html">Print Table</a><br>
+<a href="./sumnumber.html">Sum Number</a><br>
+
+<body>
+    <script>
+        function loginSystem() {
+            let password = "";
+            let attempts = 0;
+
+            while (password !== "pakistan" && password !== "fawad123" && password !== "ali123" && attempts < 3) {
+                password = prompt("Enter password");
+                attempts++;
+            }
+
+            if (password === "pakistan" || password === "fawad123" || password === "ali123") {
+                alert("Login Successful ");
+                console.log("Login Successful")
+            } else {
+                alert("Account Locked ");
+                console.log("Account Locked ");
+            }
+        }
+    </script>
+</body>
+
+</html>

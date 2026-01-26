@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Generator </title>
+</head>
+
+<body>
+    <h1>Table Generator ( function and for loop )</h1>
+    <button onclick="printTable()">Print Table</button>
+    <hr>
+    <a href="./checkage.html">Check age</a><br>
+    <a href="./even-odd.html">Even odd</a><br>
+    <a href="./sumnumber.html">Sum Number</a><br>
+    <a href="./login.html">Login</a><br>
+    <script>
+        function printtable() {
+            let num = Number(prompt('Enter table'))
+            for (let i = 1; i <= 10; i++) {
+                console.log(num + "*" + i + "=" + (num * i));
+            }
+        } printtable()
+
+
+    </script>
+</body>
+
+</html>

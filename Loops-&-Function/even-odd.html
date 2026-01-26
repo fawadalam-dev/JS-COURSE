@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even||Odd</title>
+</head>
+
+<body>
+    <h1>Even || Odd Checker</h1>
+    <button onclick="evenOdd()">Even / Odd</button>
+    <hr>
+    <a href="./checkage.html">Check Age</a><br>
+    <a href="./print-table.html">Print Table</a><br>
+    <a href="./sumnumber.html">Sum Number</a><br>
+    <a href="./login.html">Login</a><br>
+    <script>
+        function evenOdd() {
+            let num = Number(prompt("Enter a number"));
+
+            if (isNaN(num)) {
+                alert("Invalid input");
+            } else if (num % 2 === 0) {
+                alert("Even Number");
+            } else {
+                alert("Odd Number");
+            }
+        }
+    </script>
+</body>
+
+</html>

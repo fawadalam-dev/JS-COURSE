@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Number</title>
+</head>
+
+<body>
+    <h1> JavaScript program while (strong validation)</h1>
+    <button onclick="sumNumbers()">Sum Number</button>
+    <hr>
+    <a href="./checkage.html">Check Age</a><br>
+    <a href="./even-odd.html">Even odd</a><br>
+    <a href="./print-table.html">Print Table</a><br>
+    <a href="./login.html">Login</a><br>
+    <script>
+        function sumNumbers() {
+            let n;
+
+            //   formula  n=n(n+1)/2
+
+            while (true) {
+                n = Number(prompt("Enter a positive number"));
+
+                if (!isNaN(n) && n > 0) break;
+                alert("Invalid input, try again");
+            }
+
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            alert("Sum = " + sum);
+        }
+
+    </script>
+</body>
+
+</html>
