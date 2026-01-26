@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array</title>
 </head>
+
 <body>
-    <h1>hello array</h1>
+    <h1>Hello Array</h1>
+    <script>
+        // let user = []
+        // let age = []
+        // for (let i = 1; i < 5; i++) {
+        //     let username = prompt("Enter name")
+        //     let userage = Number(prompt("Enter age"))
+        //     user.push(username)
+        //     age.push(userage)
+        //     age.shift(userage)
+        // }
+        // console.log(user)
+        // console.log(age)
+        let user = []
+        while (true) {
+
+            let username = prompt("enter name (stop)=> pay array stop hoga")
+            if (username === "stop") {
+                break
+            }
+            user.push(username)
+        }
+        console.log(user)
+        console.log(user.length)
+
+        for (let i = 0; i < user.length; i++) {
+            if (user[i].length > 4) {
+                console.log(user[i])
+            }
+
+        }
+
+    </script>
 </body>
+
 </html>
