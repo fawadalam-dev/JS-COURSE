@@ -4,55 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>Data Theme</title>
 </head>
 
 <body>
-    <h1>Hello Array</h1>
+    <h1>javascript Array and Objects </h1>
     <script>
-        // let user = []
-        // let age = []
-        // for (let i = 1; i < 5; i++) {
-        //     let username = prompt("Enter name")
-        //     let userage = Number(prompt("Enter age"))
-        //     user.push(username)
-        //     age.push(userage)
-        //     age.shift(userage)
-        // }
-        // console.log(user)
-        // console.log(age)
-        // let user = []
-        // while (true) {
+        let Datatheme = {
+            house: {
+                floor1: [
+                    { room1: { items: ["books", "table", "chair", "pen"] } },
+                    { room2: { items: ["laptop", "phone", "computer"] } }
+                ],
+                floor2: [
+                    { room1: { bed: ["ali", "khan", "ashfaq"] } },
+                    { room2: { bed: ["hamdan", "nangyal", "zohan"] } },
+                    { room3: { name: "zakir" } },
+                ],
+            },
+            school: {
+                classes: [
+                    {
+                        name: "8th",
+                        students: [
+                            { name: "Ali", marks: "559" },
+                            { name: "Khan", marks: "779" }
+                        ]
+                    },
 
-        //     let username = prompt("enter name  & stop pay array stop hoga")
-        //     if (username === "stop") {
-        //         break
-        //     }
-        //     user.push(username)
-        // }
-        // // console.log(user)
-        // console.log(user)
+                    {
+                        name: "9th",
+                        students: [
+                            { name: "zain", marks: "785" },
+                            { name: "wajid", marks: "987" },
+                            { name: "sajid", marks: "857" },
+                        ]
+                    },
+                    {
+                        name: "10th",
+                        students: [
+                            { name: "azlan", marks: "564" },
+                            { name: "hamdan", marks: "764" },
+                            { name: "hasham", marks: "364" }
+                        ]
+                    }
+                ]
+            },
+            store: [
+                {
+                    catgories: "electronic",
+                    products: [
+                        { name: "laptop", price: "325000" },
+                        { name: "mobile", price: "150000" }
+                    ]
+                },
+                {
+                    catgories: "cloths",
+                    products: [
+                        { name: "jacket", price: "5600" },
+                        { name: "shirt", price: "1600" }
+                    ]
 
-        // for (let i = 0; i < user.length; i++) {
-        //     if (user[i].length > 4) {
-        //         console.log(user[i])
-        //     }
+                }
+            ]
+        };
+        console.log(Datatheme.school.classes[1].students[0].name)
+        console.log(Datatheme.school.classes[1].students[0].marks)
 
-        // }
+        console.log(Datatheme.store[0].products[1].name);
 
-        let batsman1 = []
-        let batsman2 = []
-        while (true) {
-            let player = prompt("Enter batsman name")
-            if (player === "out") {
-                break
-            }
-            batsman1.push(player)
-            for (let i = 0; i < 3; i++) {
-                console.log(batsman1)
 
-            }
-        }
     </script>
 </body>
 
