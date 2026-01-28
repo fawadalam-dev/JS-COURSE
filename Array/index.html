@@ -21,25 +21,38 @@
         // }
         // console.log(user)
         // console.log(age)
-        let user = []
-        while (true) {
+        // let user = []
+        // while (true) {
 
-            let username = prompt("enter name (stop)=> pay array stop hoga")
-            if (username === "stop") {
+        //     let username = prompt("enter name  & stop pay array stop hoga")
+        //     if (username === "stop") {
+        //         break
+        //     }
+        //     user.push(username)
+        // }
+        // // console.log(user)
+        // console.log(user)
+
+        // for (let i = 0; i < user.length; i++) {
+        //     if (user[i].length > 4) {
+        //         console.log(user[i])
+        //     }
+
+        // }
+
+        let batsman1 = []
+        let batsman2 = []
+        while (true) {
+            let player = prompt("Enter batsman name")
+            if (player === "out") {
                 break
             }
-            user.push(username)
-        }
-        console.log(user)
-        console.log(user.length)
+            batsman1.push(player)
+            for (let i = 0; i < 3; i++) {
+                console.log(batsman1)
 
-        for (let i = 0; i < user.length; i++) {
-            if (user[i].length > 4) {
-                console.log(user[i])
             }
-
         }
-
     </script>
 </body>
 
