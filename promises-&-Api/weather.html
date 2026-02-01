@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Weather App</title>
+</head>
+
+<body>
+    <h1>Pakistan Weather App</h1>
+    <form>
+        <input type="text" id="city" placeholder="Enter city name in Pakistan"><br><br>
+        <button type="button" onclick="getweather()">Get Weather</button>
+    </form>
+    <div id="weather"></div>
+
+    <script>
+        function getweather() {
+            var city = document.querySelector("#city").value;
+            var weather = document.querySelector("#weather");
+            if (city === "") {
+                weather.innerHTML = "City name are Requried ";
+                return;
+            }
+
+            var apiKey = "6cfd4e09064751c5ca7fe1d6dd89c212";
+            var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+            fetch(url)
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.cod == "404") {
+                        weather.innerHTML = `City Not Found`;
+                        return;
+                    }
+                    weather.innerHTML = ` Temprature of ${data.name} is   ${data.main.temp} C`;
+                }).catch((err) => {
+                    weather.innerHTML = "Network error";
+                });
+        }
+    </script>
+</body>
+
+</html>
