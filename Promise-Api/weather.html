@@ -33,7 +33,7 @@
                         weather.innerHTML = `City Not Found`;
                         return;
                     }
-                    weather.innerHTML = ` Temprature of ${data.name} is   ${data.main.temp} C`;
+                    weather.innerHTML = ` Temprature in ${data.name} is   ${data.main.temp} C`;
                 }).catch((err) => {
                     weather.innerHTML = "Network error";
                 });
