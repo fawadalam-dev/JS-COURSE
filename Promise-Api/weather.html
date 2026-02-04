@@ -3,42 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pakistan Weather App</title>
+    <title>Weather App</title>
 </head>
 
 <body>
-    <h1>Pakistan Weather App</h1>
-    <form>
-        <input type="text" id="city" placeholder="Enter city name in Pakistan"><br><br>
-        <button type="button" onclick="getweather()">Get Weather</button>
-    </form>
-    <div id="weather"></div>
+    <h1> Pakistan Weather App </h1>
+    <div class="card">
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter city"><br><br>
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div id="weather"></div>
+    </div>
 
     <script>
-        function getweather() {
-            var city = document.querySelector("#city").value;
-            var weather = document.querySelector("#weather");
+        async function getWeather() {
+            const city = document.querySelector("#cityInput").value;
+
             if (city === "") {
-                weather.innerHTML = "City name are Requried ";
+                alert("Please enter city name");
                 return;
             }
 
-            var apiKey = "6cfd4e09064751c5ca7fe1d6dd89c212";
-            var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-            fetch(url)
-                .then((res) => res.json())
-                .then((data) => {
-                    if (data.cod == "404") {
-                        weather.innerHTML = `City Not Found`;
-                        return;
-                    }
-                    weather.innerHTML = ` Temprature in ${data.name} is   ${data.main.temp} C`;
-                }).catch((err) => {
-                    weather.innerHTML = "Network error";
-                });
+            try {
+                const response = await fetch(
+                    `https://p2pclouds.up.railway.app/v1/learn/weather?city=${city}`
+                );
+
+                const data = await response.json();
+
+                document.querySelector("#weather").innerHTML = `
+                <h2 class="city"> City : ${data.location.name}</h2>
+                <div class="temp"> Temprature : ${Math.round(data.current.temp_c)}°C</div>
+                <p>${data.current.condition.text}</p>
+
+                <div class="details">
+                    <div>Humidity : ${data.current.humidity}%</div>
+                    <div>Wind : ${data.current.wind_kph} km/h</div>
+                </div>
+            `;
+
+            } catch (error) {
+                alert("City not found");
+            }
         }
     </script>
+
 </body>
 
 </html>
