@@ -24,6 +24,7 @@
                 alert("Please enter city name");
                 return;
             }
+
             try {
                 const response = await fetch(
                     `https://p2pclouds.up.railway.app/v1/learn/weather?city=${city}`
