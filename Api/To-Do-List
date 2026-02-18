@@ -1,160 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f2f4f7;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        body>h1,
-        body>form,
-        body>ul {
-            display: block;
-        }
-
-        body {
-            position: relative;
-        }
-
-        body::before {
-            content: "";
-        }
-
-
-        form,
-        h1,
-        ul {
-            width: 100%;
-        }
-
-        body>h1,
-        body>form,
-        body>ul {
-            max-width: 400px;
-        }
-
-        body {
-            flex-direction: column;
-        }
-
-        h1 {
-            background: #ffffff;
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px 10px 0 0;
-            color: #333;
-        }
-
-        form {
-            background: #ffffff;
-            padding: 15px;
-            display: flex;
-            gap: 10px;
-        }
-
-        input[type="text"] {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background: #4caf50;
-            color: white;
-            border: none;
-            padding: 10px 14px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #43a047;
-        }
-
-        ul {
-            background: #ffffff;
-            padding: 15px;
-            list-style: none;
-            border-radius: 0 0 10px 10px;
-        }
-
-        li {
-            background: #f9f9f9;
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        li span {
-            cursor: pointer;
-        }
-
-        li button {
-            background: #e53935;
-            padding: 6px 10px;
-            font-size: 12px;
-        }
-
-        li button:hover {
-            background: #d32f2f;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Api/To-Do-List.css">
 </head>
 
 <body>
-    <h1> To-Do List</h1>
+
+    <h1>To-Do List</h1>
+
     <form id="todoForm">
         <input type="text" id="taskInput" placeholder="Enter task" required>
-        <button type="submit">Add Task</button>
+        <button type="submit">Add</button>
     </form>
+
     <ul id="taskList"></ul>
-    <script>
 
-        const form = document.getElementById("todoForm");
-        const taskInput = document.getElementById("taskInput");
-        const taskList = document.getElementById("taskList");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const taskText = taskInput.value.trim();
-            if (taskText === "") return;
-            const li = document.createElement("li");
-            li.innerHTML = `
-            <span onclick="toggleTask(text)">${taskText}</span>
-            <button onclick="deleteTask(this)">Delete</button>
-        `;
-            taskList.appendChild(li);
-            taskInput.value = "";
-        });
-        function deleteTask(btn) {
-            btn.parentElement.remove();
-        }
-        function toggleTask(task) {
-            task.style.textDecoration =
-                task.style.textDecoration === "line-through"
-                    ? "none"
-                    : "line-through";
-        }
-    </script>
+    <script src="/Api/To-Do-List.js"></script>
 
 </body>
 
