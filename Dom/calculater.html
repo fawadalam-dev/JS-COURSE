@@ -4,37 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculater</title>
+    <link rel="stylesheet" href="./calculater.css">
+    <title>Two Number Calculator</title>
+
 </head>
 
 <body>
-    <h1>Dom : Calculate two Number </h1>
-    <form onsubmit="calculate();return false">
-        <input type="number" name="firstnumber" id="firstnumber" placeholder="Enter first number"><br><br>
-        <input type="number" name="secondnumber" id="secondnumber" placeholder="Enter second number"><br><br>
+    <h1>DOM: Calculate Two Numbers</h1>
+
+    <form onsubmit="calculate();return false;">
+        <input type="number" name="firstnumber" id="firstnumber" placeholder="Enter first number"><br>
+        <input type="number" name="secondnumber" id="secondnumber" placeholder="Enter second number"><br>
         <button type="submit">Calculate</button>
     </form>
+
     <div id="calculate"></div>
-    <script>
-        function calculate() {
-            let firstref = Number(document.querySelector("#firstnumber").value)
-            let secondref = Number(document.querySelector("#secondnumber").value)
-            let resultref = document.querySelector("#calculate")
-
-            let add = firstref + secondref
-            let sub = firstref - secondref
-            let mul = firstref * secondref
-            let div = firstref / secondref
-            resultref.innerHTML = `
-            Addition:${add}<br>
-            Subtraction:${sub}<br>
-            Multiplication:${mul}<br>
-            Division:${div}
-            `
-
-        }
-
-    </script>
+    <script src="./calculater.js"></script>
 </body>
 
 </html>

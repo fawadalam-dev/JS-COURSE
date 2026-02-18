@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bmi.css">
     <title>BMI</title>
 </head>
 
@@ -15,35 +16,8 @@
         <button onclick="bmi()">Calculate BMI</button>
     </form><br><br>
     <div id="result"></div>
-    <script>
-        function bmi() {
-            let weightref = Number(document.querySelector("#weight").value)
-            let heightref = Number(document.querySelector("#height").value)
 
-            let resultref = document.querySelector("#result")
-
-            let bmiref = weightref / (heightref * heightref)
-
-            let category = ""
-
-            if (bmiref < 18.5) {
-                category = "underweight";
-
-            } else if (bmiref < 25) {
-                category = "normal"
-            } else if (bmiref < 35) {
-                category = "overweight"
-            }
-            else {
-                category = "obese"
-            }
-            resultref.innerHTML = `
-            BMI:${bmiref}<br>
-            ${category}
-            `
-
-        }
-    </script>
+    <script src="./bmi.js"></script>
 </body>
 
 </html>

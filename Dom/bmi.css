@@ -1,20 +1,15 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    margin: 0;
-    text-align: center;
+    font-family: Arial, sans-serif;
     background-color: #f2f2f2;
+    text-align: center;
 }
 
 h1 {
-    margin-top: 20px;
-    color: red;
+    color: darkblue;
+    margin-top: 30px;
 }
 
-.card {
+form {
     background-color: white;
     width: 300px;
     margin: 20px auto;
@@ -23,16 +18,15 @@ h1 {
     border: 1px solid #ccc;
 }
 
-.search input {
-    width: 100%;
+input {
+    width: 90%;
     padding: 8px;
-    margin-bottom: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.search button {
-    width: 100%;
+button {
+    width: 95%;
     padding: 8px;
     background-color: blue;
     color: white;
@@ -41,22 +35,12 @@ h1 {
     cursor: pointer;
 }
 
-.search button:hover {
+button:hover {
     background-color: darkblue;
 }
 
-#weather {
-    margin-top: 15px;
-}
-
-.temp {
-    font-size: 40px;
+#result {
+    margin-top: 20px;
+    font-size: 18px;
     color: red;
-}
-
-.details {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #eeeeee;
-    border-radius: 5px;
 }

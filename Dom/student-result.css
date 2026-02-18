@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2a9d8f;
+    margin-top: 30px;
+}
+
+form {
+    background-color: white;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 95%;
+    padding: 8px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21867a;
+}
+
+#show-result {
+    margin-top: 20px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    border: 2px solid #2a9d8f;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#show-result span {
+    display: block;
+    margin: 8px 0;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#show-result .percentage {
+    color: #e63946;
+    background-color: #fce4e4;
+}
+
+#show-result .grade {
+    color: #2a9d8f;
+    background-color: #e0f7fa;
+}

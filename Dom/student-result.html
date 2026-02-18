@@ -4,44 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Marks</title>
+    <link rel="stylesheet" href="./student-result.css">
+    <title>Student Marks Calculator</title>
 </head>
 
 <body>
     <h1>Student Result</h1>
-    <form onsubmit="grade();return false;">
 
-        <input type="number" name="obtmarks" id="obtmarks" placeholder="Enter Obtmarks"><br><br>
-        <input type="number" name="totalmarks" id="totalmarks" placeholder="Enter Obtmarks"><br><br>
+    <form onsubmit="grade();return false;">
+        <input type="number" name="obtmarks" id="obtmarks" placeholder="Enter Obtained Marks"><br>
+        <input type="number" name="totalmarks" id="totalmarks" placeholder="Enter Total Marks"><br>
         <button type="submit">Check Result</button>
     </form>
+
     <div id="show-result"></div>
-    <script>
-        function grade() {
-            const obtmarksref = Number(document.querySelector("#obtmarks").value);
-            const totalmarksref = Number(document.querySelector("#totalmarks").value);
-            const resultdiv = document.querySelector("#show-result");
-
-            const percentage = (obtmarksref / totalmarksref) * 100;
-
-            let grade = "";
-            if (percentage >= 80) {
-                grade = "A";
-            } else if (percentage >= 70) {
-                grade = "B";
-            } else if (percentage >= 60) {
-                grade = "C";
-            } else if (percentage >= 50) {
-                grade = "D";
-            } else {
-                grade = 'Fail'
-            }
-            resultdiv.innerHTML = `Percentage: ${percentage}<br>
-            Grade:${grade}
-            `
-
-        };
-    </script>
+    <script src="./student-result.js"></script>
 </body>
 
 </html>
