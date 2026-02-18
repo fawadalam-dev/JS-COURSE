@@ -5,106 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pak-Weather</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            margin-top: 20px;
-            color: #ec5c5c;
-            letter-spacing: 2px;
-            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .card {
-            background: #ffffff;
-            width: 320px;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .search input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .search input:focus {
-            border-color: #457b9d;
-        }
-
-        .search button {
-            margin-top: 5px;
-            padding: 10px 15px;
-            width: 100%;
-            border: none;
-            border-radius: 10px;
-            background: #457b9d;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .search button:hover {
-            background: #1d3557;
-        }
-
-        #weather {
-            margin-top: 15px;
-        }
-
-        .city,
-        .region {
-            font-size: 16px;
-            color: #1d3557;
-            margin: 5px 0;
-        }
-
-        .temp {
-            font-size: 48px;
-            color: #e63946;
-            margin: 10px 0;
-        }
-
-        #weather h3 {
-            color: #457b9d;
-            margin: 5px 0;
-        }
-
-        #weather p {
-            color: #555;
-            margin: 5px 0;
-        }
-
-        .details {
-            margin-top: 10px;
-            padding: 10px;
-            background: #f1f5f9;
-            border-radius: 10px;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .details div {
-            margin: 5px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="/JS-COURSE/Api/weather.css">
 </head>
 
 <body>
@@ -116,43 +17,7 @@
         </div>
         <div id="weather"></div>
     </div>
-
-    <script>
-        async function getWeather() {
-            const city = document.querySelector("#cityInput").value;
-
-            if (city === "") {
-                alert("Please enter city name");
-                return;
-            }
-
-            try {
-                const response = await fetch(
-                    `https://p2pclouds.up.railway.app/v1/learn/weather?city=${city}`
-                );
-
-                const data = await response.json();
-
-                document.querySelector("#weather").innerHTML = `
-                <h2 class="city"> City : ${data.location.name}</h2>
-                <h1 class="temp">Now <br>${Math.round(data.current.temp_c)}°</h1>
-                <h3> ${data.current.condition.text}</h3>
-                <p> Feels Like : ${Math.round(data.current.feelslike_c)}°</p>
-
-                <div class="details">
-                    <div>Humidity : ${data.current.humidity}%</div>
-                    <div>Wind : ${data.current.wind_kph} km/h</div>
-                    <div>Time : ${data.location.localtime}
-                </div>
-            `;
-
-            } catch (error) {
-                document.querySelector("#weather").innerHTML = `<div class="details"> City not found.</div>`;
-            }
-
-        }
-    </script>
-
+    <script src="/JS-COURSE/Api/weather.js"></script>
 </body>
 
 </html>
